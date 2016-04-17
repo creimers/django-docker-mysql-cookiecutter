@@ -7,3 +7,6 @@ A raspberry pi based web interface as a meta product for artwork.
 * http://raspberrypiguide.de/howtos/raspberry-pi-gpio-how-to/
 * http://www.thirdeyevis.com/pi-page-2.php
 * https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/breadboard/
+
+## buy this
+* https://www.flikto.de/products/adafruit-pi-cobbler-plus-kit-breakout-for-raspberry-pi-b-plus
