@@ -1,5 +1,8 @@
 # raspberry-painting
 
+> Moderne Kusnt wird durch zwei Dinge definiert: Durch die völlige Freiheit derer, die sie machen, un durch das Bewusstsein des Künstlers, beim Machen der Kunst ständig beobachtet, diskutert und beschrieben zu werden. 
+> - Ernst H. Gombrich, Kunsthistoriker
+
 A raspberry pi based web interface as a meta product for artwork.
 
 ## read this
