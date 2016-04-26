@@ -13,4 +13,4 @@ A raspberry pi based web interface as a meta product for artwork.
 * https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/
 
 ## buy this
-* https://www.flikto.de/products/adafruit-pi-cobbler-plus-kit-breakout-for-raspberry-pi-b-plus
+* https://www.flikto.de/products/adafruit-assembled-pi-cobbler-breakout-cable-for-raspberry-pi
