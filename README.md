@@ -20,5 +20,8 @@ A raspberry pi based web interface as a meta product for artwork.
 ### dyndns
 * http://raspberry.tips/raspberrypi-einsteiger/raspberry-pi-einsteiger-guide-dyndns-teil-5/
 
+### letsencrypt
+* https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04
+
 ## buy this
 * https://www.flikto.de/products/adafruit-assembled-pi-cobbler-breakout-cable-for-raspberry-pi
