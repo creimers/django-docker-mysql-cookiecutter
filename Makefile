@@ -1,6 +1,8 @@
 PYTHON := env/bin/python
 PIP := env/bin/pip
 
+all: install-common
+
 $(PYTHON):
 	virtualenv -p python3 env
 
