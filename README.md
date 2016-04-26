@@ -17,5 +17,8 @@ A raspberry pi based web interface as a meta product for artwork.
 * https://raspberrypi.stackexchange.com/questions/12966/what-is-the-difference-between-board-and-bcm-for-gpio-pin-numbering
 * http://www.raspberrypi-spy.co.uk/2012/06/control-led-using-gpio-output-pin/
 
+### dyndns
+* http://raspberry.tips/raspberrypi-einsteiger/raspberry-pi-einsteiger-guide-dyndns-teil-5/
+
 ## buy this
 * https://www.flikto.de/products/adafruit-assembled-pi-cobbler-breakout-cable-for-raspberry-pi
