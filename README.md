@@ -15,6 +15,7 @@ A raspberry pi based web interface as a meta product for artwork.
 ### GPIO
 * https://www.elektronik-kompendium.de/sites/raspberry-pi/1907101.htm
 * https://raspberrypi.stackexchange.com/questions/12966/what-is-the-difference-between-board-and-bcm-for-gpio-pin-numbering
+* http://www.raspberrypi-spy.co.uk/2012/06/control-led-using-gpio-output-pin/
 
 ## buy this
 * https://www.flikto.de/products/adafruit-assembled-pi-cobbler-breakout-cable-for-raspberry-pi
