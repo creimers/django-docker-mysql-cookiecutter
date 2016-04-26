@@ -12,5 +12,8 @@ A raspberry pi based web interface as a meta product for artwork.
 * https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/robot/breadboard/
 * https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/
 
+### GPIO
+* https://www.elektronik-kompendium.de/sites/raspberry-pi/1907101.htm
+
 ## buy this
 * https://www.flikto.de/products/adafruit-assembled-pi-cobbler-breakout-cable-for-raspberry-pi
