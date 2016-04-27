@@ -6,7 +6,7 @@ def check(pin):
     except:
         response = None
     
-    if response and repsonse.status_code == 200:
+    if response and response.status_code == 200:
         try:
             import RPi.GPIO as GPIO
             import time
