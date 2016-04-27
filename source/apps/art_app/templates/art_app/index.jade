@@ -1,5 +1,8 @@
+- load staticfiles
 doctype html
 html
   head
     title ART
-  body(style="background-color: {{color}};")
+    link(href="{% static 'art_app/style.css' %}" rel="stylesheet")
+  body
+    h1 est
