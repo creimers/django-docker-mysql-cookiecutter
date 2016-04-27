@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from apps.art_app.led import blink
+from apps.utils.led import blink
 
 
 class ColorView(TemplateView):
