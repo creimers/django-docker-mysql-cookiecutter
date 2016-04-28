@@ -1,11 +1,2 @@
-- load staticfiles
-doctype html
-html
-  head
-    title ART
-    link(href='https://fonts.googleapis.com/css?family=Roboto+Mono', rel='stylesheet', type='text/css')
-    link(href="{% static 'art_app/style.css' %}" rel="stylesheet")
-  body
-    .wrapper
-      h2 current server location: {{location.city}}
-      h2 current server ip: {{location.query}}
+h2 current server location: {{location.city}}
+h2 current server ip: {{location.query}}

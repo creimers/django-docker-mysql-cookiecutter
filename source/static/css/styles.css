@@ -6,6 +6,10 @@ body{
   background: white;
 }
 
+h1, h2, h3, h4, h5, p, a{
+  font-family: 'Roboto Mono', sans-sarif;
+}
+
 .wrapper{
   max-width: 80vw;
   margin: 0 auto;
