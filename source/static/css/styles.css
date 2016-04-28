@@ -1,0 +1,12 @@
+body{
+  font-family: 'Roboto Mono', sans-sarif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: white;
+}
+
+.wrapper{
+  max-width: 80vw;
+  margin: 0 auto;
+}
