@@ -66,6 +66,8 @@ MIDDLEWARE_CLASSES = [
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+
+    'apps.art_app.middleware.BlinkMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
