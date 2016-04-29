@@ -29,4 +29,4 @@ def check(pin):
             pass
 
 if __name__ == '__main__':
-    check(18)
+    check(27)
