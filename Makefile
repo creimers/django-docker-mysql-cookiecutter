@@ -1,3 +1,4 @@
+NPM := $(shell which npm)
 PYTHON := env/bin/python
 PIP := env/bin/pip
 
@@ -13,3 +14,6 @@ install-common: $(PIP)
 
 install-rpi: install-common
 	$(PIP) install -r source/requirements/rpi.txt
+
+install-node-packages: ./source/static/package.json
+	$(NPM) install --prefix ./source/static
