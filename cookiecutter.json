@@ -1,0 +1,5 @@
+{
+  "project_name": "project_name",
+  "html_framework": ["bootstrap 4", "foundation 6", "material design lite"],
+  "default_font": ["Helvetica", "Roboto", "Roboto Mono"]
+}

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/creimers/djangocms-docker-cookiecutter#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.2"
+    "bootstrap": "^4.0.0-alpha.2",
+    "jquery": "^2.2.3"
   }
 }

@@ -1,5 +1,9 @@
 body{
+  {% if cookiecutter.default_font == 'Roboto Mono' -%}
   font-family: 'Roboto Mono', sans-sarif;
+  {% elif cookiecutter.default_font == 'Roboto' -%}
+  font-family: 'Roboto', sans-sarif;
+  {%- endif %}
   margin: 0;
   padding: 0;
   height: 100%;
@@ -7,7 +11,11 @@ body{
 }
 
 h1, h2, h3, h4, h5, p, a{
+  {% if cookiecutter.default_font == 'Roboto Mono' -%}
   font-family: 'Roboto Mono', sans-sarif;
+  {% elif cookiecutter.default_font == 'Roboto' -%}
+  font-family: 'Roboto', sans-sarif;
+  {%- endif %}
 }
 
 .content-grid {

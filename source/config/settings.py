@@ -48,6 +48,17 @@ INSTALLED_APPS = [
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
 
+    'easy_thumbnails',
+    'filer',
+    'mptt',
+
+    'cmsplugin_filer_file',
+    'cmsplugin_filer_folder',
+    'cmsplugin_filer_link',
+    'cmsplugin_filer_image',
+    'cmsplugin_filer_teaser',
+    'cmsplugin_filer_video',
+
     'apps.art_app',
     'apps.utils',
 ]
@@ -90,7 +101,6 @@ TEMPLATES = [
             ],
 
             'loaders': [
-                # PyJade part:   ##############################
                 ('pyjade.ext.django.Loader', (
                     'django.template.loaders.filesystem.Loader',
                     'django.template.loaders.app_directories.Loader',
@@ -106,7 +116,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
 
 DATABASES = {
     'default': {
@@ -170,5 +179,18 @@ LANGUAGES = [
 ]
 
 CMS_TEMPLATES = (
-    ('layout/default.jade', 'Default'),
+    {% if cookiecutter.html_framework == 'material design lite' -%}
+    ('layout/default_md_lite.jade', 'Default'),
+    {% elif cookiecutter.html_framework == 'foundation 6' -%}
+    ('layout/default_foundation.jade', 'Default'),
+    {% elif cookiecutter.html_framework == 'bootstrap 4' -%}
+    ('layout/default_bootstrap.jade', 'Default'),
+    {%- endif %}
+)
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
 )
