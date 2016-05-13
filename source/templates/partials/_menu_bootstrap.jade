@@ -1,4 +1,5 @@
 - load menu_tags
 
 for child in children
-  a.mdl-navigation__link(href='{{ child.get_absolute_url }}') {{child.get_menu_title}}
+  li(class="nav-item {% if child.ancestor %}ancestor{% endif %}{% if child.selected %} active{% endif %}{% if child.children %} dropdown{% endif %}")
+    a.nav-link(href='{{ child.get_absolute_url }}') {{child.get_menu_title}}
