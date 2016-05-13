@@ -16,4 +16,7 @@ install-rpi: install-common
 	$(PIP) install -r source/requirements/rpi.txt
 
 install-node-packages: ./source/static/package.json
+	#install into static dir
 	$(NPM) install --prefix ./source/static
+	#install for project as a whloe
+	$(NPM) install
