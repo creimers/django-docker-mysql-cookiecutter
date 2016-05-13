@@ -27,7 +27,9 @@ html
 
     - render_block "css"
 
-    link(href="{% static 'css/styles.css' %}" rel="stylesheet")
+    {% raw %}
+    link(href="{{STATIC_URL}}css/styles.css" rel="stylesheet")
+    {% endraw %}
 
   body
     - cms_toolbar

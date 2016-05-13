@@ -2,10 +2,11 @@
 - load cms_tags menu_tags
 
 block content
+{% raw %}
   nav.navbar.navbar-light.bg-faded
     button.navbar-toggler.hidden-sm-up(type="button", data-toggle="collapse", data-target="#exCollapsingNavbar2") &#9776;
     .collapse.navbar-toggleable-xs#exCollapsingNavbar2
-      a.navbar-brand(href="#") {{cookiecutter.project_name}}
+      a.navbar-brand(href="#"){% endraw %} {{cookiecutter.project_name}} {% raw %}
       ul.nav.navbar-nav
         {% show_menu 0 2 100 100 "partials/_menu_md_lite.jade" %}
 
@@ -13,3 +14,4 @@ block content
     .row
       .col-sm-12
         - placeholder content
+{% endraw %}
