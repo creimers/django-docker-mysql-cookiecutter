@@ -27,4 +27,4 @@ uWSGI==2.0.12
 dj-database-url==0.4.1
 psycopg2==2.6.1
 django-filer==1.2.0
-cmsplugin-filer=1.0.1
+cmsplugin-filer==1.0.1
