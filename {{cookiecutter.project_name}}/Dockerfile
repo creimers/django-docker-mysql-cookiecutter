@@ -5,6 +5,7 @@ WORKDIR /project
 
 RUN mkdir -p /var/log/supervisor
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 

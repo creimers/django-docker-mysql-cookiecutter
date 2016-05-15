@@ -1,5 +1,7 @@
 # djangocms-docker-cookiecutter
 
+## https://medium.com/@JakubBorys/docerizing-django-cms-28c3ed11ba43#.ylgod8h4a
+
 ## what's inside.
 * python3
 * Django 1.9.5
@@ -13,6 +15,8 @@
 ## build
 1. `docker-componse build`
 
-## run
+## initializer database
 1. `docker-compose run django python ./source/manage.py migrate`
-2. `docker-compose run -p 8000:8000 django python ./source/manage.py runserver 0.0.0.0:8000`
+
+## run
+1. `docker-compose run -p 8000:8000 django python ./source/manage.py runserver 0.0.0.0:8000`
