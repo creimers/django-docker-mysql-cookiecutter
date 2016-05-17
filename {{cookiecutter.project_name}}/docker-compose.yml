@@ -2,7 +2,7 @@ django:
   build: .
 
   environment:
-    DJANGO_SETTINGS_MODULE: config.settings
+    DJANGO_SETTINGS_MODULE: src.config.settings
     DB_HOST: postgres
     DB_NAME: postgres
 
@@ -11,6 +11,8 @@ django:
 
   links:
     - postgres
+  volumes:
+    - ./src/:/project/src/
 
 postgres:
   image: postgres

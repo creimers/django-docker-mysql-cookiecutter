@@ -21,6 +21,6 @@ RUN pip install -r requirements.txt
 
 EXPOSE 80
 
-CMD ["./service/env/bin/supervisord", "-c", "/etc/supervisor/supervisor.conf"]
+#CMD ["./service/env/bin/supervisord", "-c", "/etc/supervisor/supervisor.conf"]
 
-CMD uwsgi etc/uwsgi.ini
+#CMD uwsgi etc/uwsgi.ini

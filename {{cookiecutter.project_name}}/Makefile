@@ -1,3 +1,4 @@
+DOCKER := $(shell which docker-compose)
 NPM := $(shell which npm)
 PYTHON := env/bin/python
 PIP := env/bin/pip
@@ -10,13 +11,15 @@ $(PYTHON):
 $(PIP): $(PYTHON)
 
 install-common: $(PIP)
-	$(PIP) install -r source/requirements/common.txt
-
-install-rpi: install-common
-	$(PIP) install -r source/requirements/rpi.txt
+	$(PIP) install -r requirements.txt
 
 install-node-packages: ./source/static/package.json
 	#install into static dir
 	$(NPM) install --prefix ./source/static
 	#install for project as a whloe
 	$(NPM) install
+
+docker:
+	docker-compose build
+	docker-compose run django python ./source/manage.py migrate
+	docker-compose run django python ./source/manage.py collectstatic --noinput
