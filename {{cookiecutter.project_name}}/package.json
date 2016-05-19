@@ -4,7 +4,8 @@
   "description": "## what's inside. * python3 * Django 1.9.5 * djangoCMS 3.2.5 * pyjade * bootstrap 4",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jade2html": "./bin/compilejade.sh",
+    "build:watch": "onchange './**/*.jade' -- npm run jade2html"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,6 @@
   },
   "homepage": "https://github.com/creimers/djangocms-docker-cookiecutter#readme",
   "dependencies": {
+    "onchange": "^2.4.0"
   }
 }

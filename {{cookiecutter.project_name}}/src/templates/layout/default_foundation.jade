@@ -1,4 +1,4 @@
-- extends 'base.jade'
+- extends 'base.html'
 - load cms_tags menu_tags
 
 block content
@@ -11,7 +11,7 @@ block content
   #example-menu.top-bar
     .top-bar-left
       ul.dropdown.menu(data-dropdown-menu='')
-        {% show_menu 0 2 100 100 "partials/_menu_md_lite.jade" %}
+        {% show_menu 0 2 100 100 "partials/_menu_md_lite.html" %}
 
   .row
     .small-12.columns
