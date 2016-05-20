@@ -35,6 +35,8 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
+    'djangocms_admin_style',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,8 +49,8 @@ INSTALLED_APPS = [
     'treebeard',
     'menus',
     'sekizai',
-    'djangocms_admin_style',
     'djangocms_text_ckeditor',
+    'reversion',
 
     'easy_thumbnails',
     'filer',
@@ -92,8 +94,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
+                'django.template.context_processors.csrf',
                 'sekizai.context_processors.sekizai',
+                'django.template.context_processors.static',
                 'cms.context_processors.cms_settings',
             ],
 

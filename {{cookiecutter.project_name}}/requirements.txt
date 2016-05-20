@@ -24,3 +24,5 @@ dj-database-url==0.4.1
 psycopg2==2.6.1
 django-filer==1.2.0
 git+git://github.com/divio/cmsplugin-filer.git
+pyjade==4.0.0
+django-reversion<=1.11
