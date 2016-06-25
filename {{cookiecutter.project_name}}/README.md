@@ -16,7 +16,7 @@
 1. `docker-componse build`
 
 ## initializer database
-1. `docker-compose run django python .//manage.py migrate`
+1. `docker-compose run django python ./manage.py migrate`
 
 ## run
 1. `docker-compose run -p 8000:8000 django python ./manage.py runserver 0.0.0.0:8000`
