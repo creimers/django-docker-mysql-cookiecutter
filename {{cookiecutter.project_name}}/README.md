@@ -5,10 +5,7 @@
 ## what's inside.
 * python3
 * Django 1.9.5
-* djangoCMS 3.2.5
 * pyjade
-* material design lite | bootstrap 4 | foundation 6
-* Rototo | Roboto Mono | Helvetica
 
 # Usage
 

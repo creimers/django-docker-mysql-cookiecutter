@@ -45,23 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'cms',
-    'treebeard',
-    'menus',
-    'sekizai',
-    'djangocms_text_ckeditor',
-    'reversion',
-
     'easy_thumbnails',
     'filer',
     'mptt',
-
-    'cmsplugin_filer_file',
-    'cmsplugin_filer_folder',
-    'cmsplugin_filer_link',
-    'cmsplugin_filer_image',
-    'cmsplugin_filer_teaser',
-    'cmsplugin_filer_video',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -73,11 +59,6 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.page.CurrentPageMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware',
 ]
 
 ROOT_URLCONF = 'src.config.urls'
@@ -97,7 +78,6 @@ TEMPLATES = [
                 'django.template.context_processors.csrf',
                 'sekizai.context_processors.sekizai',
                 'django.template.context_processors.static',
-                'cms.context_processors.cms_settings',
             ],
 
             'loaders': [
@@ -174,20 +154,9 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
 MEDIA_URL = "/media/"
 
-
 LANGUAGES = [
     ('de', 'German'),
 ]
-
-CMS_TEMPLATES = (
-    {% if cookiecutter.html_framework == 'material design lite' -%}
-    ('layout/default_md_lite.jade', 'Default'),
-    {% elif cookiecutter.html_framework == 'foundation 6' -%}
-    ('layout/default_foundation.jade', 'Default'),
-    {% elif cookiecutter.html_framework == 'bootstrap 4' -%}
-    ('layout/default_bootstrap.jade', 'Default'),
-    {%- endif %}
-)
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',

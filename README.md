@@ -1,4 +1,8 @@
-1. create project
+# django + docker cookiecutter
+## create project
 
-* `mkdir projectname && cd $_`
+* `cookiecutter git@github.com:creimers/django-docker-cookiecutter.git`
+
+or
+
 * `cookiecutter django-docker-cookiecutter`

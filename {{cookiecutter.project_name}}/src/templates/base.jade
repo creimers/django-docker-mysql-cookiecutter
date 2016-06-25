@@ -9,21 +9,8 @@ html
 
     title {{cookiecutter.project_name}}
 
-    {% if cookiecutter.default_font == 'Roboto Mono' -%}
-    link(href='https://fonts.googleapis.com/css?family=Roboto+Mono', rel='stylesheet', type='text/css')
-    {% elif cookiecutter.default_font == 'Roboto' -%}
-    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
-    {%- endif %}
-
-    {% if cookiecutter.html_framework == 'material design lite' -%}
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="https://code.getmdl.io/1.1.3/material.grey-red.min.css")
-    {% elif cookiecutter.html_framework == 'foundation 6' -%}
-    link(rel="stylesheet", href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css")
-    {% elif cookiecutter.html_framework == 'bootstrap 4' -%}
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css")
-    {%- endif %}
-
 
     - render_block "css"
 
@@ -37,13 +24,6 @@ html
 
     script(src="https://code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
 
-    {% if cookiecutter.html_framework == 'material design lite' -%}
     script(defer, src="https://code.getmdl.io/1.1.3/material.min.js")
-    {% elif cookiecutter.html_framework == 'foundation 6' -%}
-    script(defer, src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js")
-    {% elif cookiecutter.html_framework == 'bootstrap 4' -%}
-    script(defer, src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.2/js/tether.min.js")
-    script(defer, src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
-    {%- endif %}
 
     - render_block "js"
