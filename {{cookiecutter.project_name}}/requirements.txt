@@ -1,30 +1,25 @@
-Django==1.10.1
+Django==1.10.2
 
 # channels 
 channels
 asgi-redis
 daphne
 
-django-sekizai==0.9.0
-gnureadline==6.3.3
-html5lib==0.9999999
-pexpect==4.0.1
-pickleshare==0.7.2
+# REST
+djangorestframework==3.4.6
+djangorestframework-filters==0.8.0
+djangorestframework-jwt==1.8.0
+djoser==0.5.1
+django-extra-fields
+
 Pillow==3.2.0
-ptyprocess==0.5.1
-requests==2.9.1
-simplegeneric==0.8.1
-six==1.10.0
-traitlets==4.2.1
-django-filer==1.2.0
-pyjade==4.0.0
-django-reversion<=1.11
 
 # dev
 ipdb
-ipython
-ipython-genutils
 
 uWSGI==2.0.12
 dj-database-url==0.4.1
 psycopg2==2.6.1
+
+whitenoise
+pytest-django==2.9.1

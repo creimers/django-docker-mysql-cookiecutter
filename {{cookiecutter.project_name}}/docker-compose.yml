@@ -1,18 +1,36 @@
-django:
-  build: .
+version: '2'
 
-  environment:
-    DJANGO_SETTINGS_MODULE: src.config.settings
-    DB_HOST: postgres
-    DB_NAME: postgres
+volumes:
+  postgres_data: {}
+  postgres_backup: {}
 
-  ports:
-    - "8000:80"
+services:
+  django:
+    build:
+      context: .
 
-  links:
-    - postgres
-  volumes:
-    - ./src/:/project/src/
+    env_file: .env
+    environment:
+      DJANGO_SETTINGS_MODULE: config.settings
+      DB_HOST: postgres
+      DB_NAME: postgres
 
-postgres:
-  image: postgres
+    ports:
+      - "8000:8000"
+
+    links:
+      - postgres
+
+    volumes:
+      - ./src/:/project/src/
+      - ./backups:/backups
+
+    command: /project/bin/uwsgi.sh
+
+  postgres:
+    env_file: .env
+    image: mdillon/postgis
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - postgres_backup:/backups
