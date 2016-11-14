@@ -1,19 +1,18 @@
-# djangocms-docker-cookiecutter
-
-## https://medium.com/@JakubBorys/docerizing-django-cms-28c3ed11ba43#.ylgod8h4a
+# {{cookiecutter.project_name}}
 
 ## what's inside.
 * python3
-* latest Django
-* pyjade
+* Django 1.9
 
-# Usage
+## main commands
 
-## build
-1. `docker-componse build`
+### development
+* `docker-compose build`
+* `docker-compose run django python ./src/manage.py migrate`
+* `docker-compose run -p 8000:8000 django python ./src/manage.py runserver 0.0.0.0:8000`
 
-## initializer database
-1. `docker-compose run django python ./src/manage.py migrate`
+* `docker-compose run django python ./src/manage.py sqlflush`
+* `psql -U username -h postgres`
 
-## run
-1. `docker-compose run -p 8000:8000 django python ./src/manage.py runserver 0.0.0.0:8000`
+### production
+* `docker-compose -f docker-compose.yml -f docker-compose-production.yml up -d`
