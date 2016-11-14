@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,7 +60,6 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -73,12 +72,9 @@ TEMPLATES = [
             ],
 
             'loaders': [
-                ('pyjade.ext.django.Loader', (
-                    'django.template.loaders.filesystem.Loader',
-                    'django.template.loaders.app_directories.Loader',
-                ))
-            ],
-            'builtins': ['pyjade.ext.django.templatetags'],
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ]
         },
     },
 ]
