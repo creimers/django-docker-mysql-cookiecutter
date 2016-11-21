@@ -1,4 +1,5 @@
 {
   "project_name": "project_name",
-  "domain": "domain"
+  "domain": "www.domain.com",
+  "port": "8000"
 }
