@@ -1,4 +1,4 @@
-Django==1.10.2
+Django==1.10.4
 
 # channels 
 channels
@@ -6,9 +6,9 @@ asgi-redis
 daphne
 
 # REST
-djangorestframework==3.4.6
+djangorestframework==3.5.3
 djangorestframework-filters==0.8.0
-djangorestframework-jwt==1.8.0
+djangorestframework-jwt==1.9.0
 djoser==0.5.1
 django-extra-fields
 
