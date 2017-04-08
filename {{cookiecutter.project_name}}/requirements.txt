@@ -1,12 +1,14 @@
 Django==1.10.5
 
 # channels 
+{% if cookiecutter.channels == 'y' %}
 channels
 asgi-redis
 daphne
+{% endif %}
 
 # REST
-djangorestframework==3.5.3
+djangorestframework==3.6.2
 djangorestframework-filters==0.8.0
 djangorestframework-jwt==1.9.0
 djoser==0.5.1
@@ -23,3 +25,7 @@ psycopg2==2.6.1
 
 whitenoise
 pytest-django==3.1.2
+
+{% if cookiecutter.zappa == 'y' %}
+zappa==0.40.0
+{% endif %}
