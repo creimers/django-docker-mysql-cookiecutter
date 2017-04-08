@@ -18,7 +18,7 @@ services:
       - postgres
 
     volumes:
-      - ./src/:/project/src/
+      - .:/project
       - ./backups:/backups
 
     command: /project/bin/uwsgi.sh
