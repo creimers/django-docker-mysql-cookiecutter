@@ -1,4 +1,4 @@
-Django==1.10.5
+Django==1.11.1
 
 # channels 
 {% if cookiecutter.channels == 'y' %}
@@ -7,14 +7,19 @@ asgi-redis
 daphne
 {% endif %}
 
+django-filter==0.13.0
+django-cors-headers==1.2.0
+
+{% if cookiecutter.graphene == 'y' %}
+graphene==1.1.3
+graphene-django==1.2.1
+{% endif %}
+
 # REST
 djangorestframework==3.6.2
 djangorestframework-filters==0.8.0
 djangorestframework-jwt==1.9.0
-djoser==0.5.1
-django-extra-fields
-
-Pillow==3.2.0
+djoser==0.5.4
 
 # dev
 ipdb
