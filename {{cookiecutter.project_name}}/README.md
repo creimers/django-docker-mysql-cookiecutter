@@ -2,7 +2,7 @@
 
 ## what's inside.
 * python3
-* Django 1.9
+* Django 1.11
 
 ## main commands
 
@@ -19,3 +19,6 @@
 
 ### test
 `docker-compose run django py.test -s .`
+
+## TODO
+* [  ] graphene config

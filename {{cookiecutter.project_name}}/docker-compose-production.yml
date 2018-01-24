@@ -4,7 +4,7 @@ services:
   django:
     restart: always
     environment:
-      DJANGO_SETTINGS_MODULE: config.production
+      DJANGO_SETTINGS_MODULE: config.env.production
 
   postgres:
     restart: always

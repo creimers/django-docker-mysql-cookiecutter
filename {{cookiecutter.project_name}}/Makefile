@@ -30,3 +30,9 @@ zappa: $(PIP)
 	$(PIP) install -r requirements.txt
 
 {% endif %}
+
+runserver: $(DC)
+	docker-compose run -p 8000:8000 django python ./manage.py runserver 0.0.0.0:8000
+
+superuser: $(DC)
+	docker-compose run django python ./manage.py createsuperuser
