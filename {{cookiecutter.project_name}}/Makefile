@@ -32,7 +32,16 @@ zappa: $(PIP)
 {% endif %}
 
 runserver: $(DC)
-	docker-compose run -p 8000:8000 django python ./manage.py runserver 0.0.0.0:8000
+	docker-compose run -p {{cookiecutter.port}}:{{cookiecutter.port}} django python ./manage.py runserver 0.0.0.0:{{cookiecutter.port}}
 
 superuser: $(DC)
 	docker-compose run django python ./manage.py createsuperuser
+
+test: $(DC)
+	docker-compose run django py.test
+
+shell:
+	 docker-compose run django python ./manage.py shell
+
+backup:
+	docker-compose exec db pg_dump -U postgres -d postgres -f ./db_backups/`date +%Y-%m-%d_%H:%M:%S`.sql

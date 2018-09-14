@@ -8,3 +8,11 @@ services:
 
   postgres:
     restart: always
+
+{% if cookiecutter.celery == 'y' %}
+  celery:
+    restart: always
+
+  rabbit:
+    restart: always
+{% endif %}

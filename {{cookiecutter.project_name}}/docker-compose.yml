@@ -30,3 +30,23 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - postgres_backup:/backups
+      - ./backups:/db_backups
+
+{% if cookiecutter.celery == 'y' %}
+  celery:
+    build:
+      context: .
+    env_file: .env
+    command: celery worker -l info -b amqp://user:user@rabbit:5672// -A config.celery_config
+    volumes:
+      - .:/project
+    links:
+      - postgres
+      - rabbit
+
+  rabbit:
+    image: rabbitmq:alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=user
+{% endif %}
