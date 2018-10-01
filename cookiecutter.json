@@ -1,5 +1,8 @@
 {
   "project_name": "project_name",
   "domain": "www.domain.com",
-  "port": "8000"
+  "port": "8000",
+  "zappa": "n",
+  "graphene": "n",
+  "celery": "n"
 }

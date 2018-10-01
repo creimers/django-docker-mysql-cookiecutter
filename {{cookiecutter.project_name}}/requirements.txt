@@ -1,25 +1,34 @@
-Django==1.10.5
+Django==1.11.15
 
-# channels 
-channels
-asgi-redis
-daphne
+django-filter==1.1
+django-cors-headers==1.2.0
+
+{% if cookiecutter.graphene == 'y' %}
+graphene-django>=2.0
+{% endif %}
 
 # REST
-djangorestframework==3.5.3
-djangorestframework-filters==0.8.0
+djangorestframework==3.8.2
 djangorestframework-jwt==1.9.0
-djoser==0.5.1
-django-extra-fields
-
-Pillow==3.2.0
+djoser==1.1.5
 
 # dev
 ipdb
 
-uWSGI==2.0.12
+uWSGI==2.0.15
 dj-database-url==0.4.1
 psycopg2==2.6.1
 
-whitenoise
+# testing
 pytest-django==3.1.2
+pytest-factoryboy==1.3.1
+factory_boy===2.8.1
+Faker==0.8.8
+
+{% if cookiecutter.zappa == 'y' %}
+zappa==0.40.0
+{% endif %}
+
+{% if cookiecutter.celery == 'y' %}
+celery==4.2
+{% endif %}
